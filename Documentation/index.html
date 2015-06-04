@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>ShotPro Community Script - Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+	body a { text-decoration: none; }
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;ShotPro Community Script&rdquo; Documentation by &ldquo;Miguel Vasquez&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;ShotPro Community Script&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 27, April 2015<br>
+					By: Miguel Vasquez<br>
+					Email: <a href="mailto:miguelvasquezweb@gmail.com">miguelvasquezweb@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my script. If you have any questions that are beyond the scope of this help file, please feel free to email via <a href="mailto:miguelvasquezweb@gmail.com">miguelvasquezweb@gmail.com</a> Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#mysql">Setting MySQL</a></li>
+			<li><a href="#upload">Uploading Files</a></li>
+			<li><a href="#installation ">Installation</a></li>
+			<li><a href="#admin">Settings Admin Panel</a></li>
+			<li><a href="#twitter">Create App Twitter</a></li>
+			<li><a href="#customize">Customize</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		<hr>
+		
+		<p>
+			<strong>ShotPro Community Script</strong>  is a community of graphic designers and web where they share their latest and 
+			most impressive works.
+			
+			users can create projects with attachments, lists, follow other users, comment and give me like a shot.
+
+			In addition to receiving notifications, send private messages with attachments, designers look for skills, location or available for hire, 
+			create jobs and ads.
+		</p>
+		
+		<h3><strong>Features:</strong></h3>
+		<ol>
+			<li>Built with Laravel</li>
+			<li>Bootstrap </li>
+			<li>Authentication with Twitter</li>
+			<li>Font Awesome</li>
+			<li>IcoMoon</li>
+			<li>Flat UI</li>
+			<li>Send message direct/private with attachments</li>
+			<li>Teams</li>
+			<li>Team Members</li>
+			<li>Users can create Projects</li>
+			<li>Users can create Lists to organize your favorite designers</li>
+			<li>Follow/Unfollow users</li>
+			<li>Tags</li>
+			<li>Find people</li>
+			<li>Notifications Real-time</li>
+			<li>Comments on Shots</li>
+			<li>Like on Shots</li>
+			<li>Like on Comments</li>
+			<li>Block/Unblock users</li>
+			<li>Option Delete Account</li>
+			<li>Upload cover</li>
+			<li>User validation by email</li>
+			<li>Recovery password</li>
+			<li>An email, by account</li>
+			<li>Report users/publications</li>
+			<li>Change password</li>
+			<li>API for developers</li>
+			<li>SiteMaps</li>
+			<li>Edit/Delete publications</li>
+			<li>Users can create Ads</li>
+			<li>Users can create Jobs</li>
+			<li>Integration with Paypal</li>
+			<li>Animated Gifs allowed(Only if it is enabled on the server Imagick)</li>
+			<li>Views Counter</li>
+			<li>Color Palette in the shots/publications</li>
+			<li>XSS: Protection from cross site scripting </li>
+			<li>Secure Bcrypt password hashing</li>
+			<li>SMTP Support</li>
+			<li>Navigation with arrow keys</li>
+			<li>Like in the shots with the "L" key</li>
+			<li>Share social</li>
+			<li>Skills of the user</li>
+			<li>Availability to be hired</li>
+			<li>Last Shots, Popular, Most Commented, Most Viewed</li>
+			<li>Feed users you follow</li>
+			<li>Overall statistics</li>
+			<li>Goods for Sale / Users can link their products for sale</li>
+		</ol>
+		<hr />
+		
+		<h3><strong>Requirements:</strong> - <a href="#toc">top</a></h3>
+		<ul>
+			<li>PHP 5.4 or Greater</li>
+			<li>cURL</li>
+			<li>PDO Driver</li>
+			<li>GD Library or ImageMagick or Imagick.</li>
+			<li>Enabled function mbstring</li>
+			<li>This script was developed with PHP OOP and MVC</li>
+			<li>allow_url_fopen (PHP.INI) is ON</li>
+			<li>MCrypt PHP Extension</li>
+		</ul>
+
+<hr />
+		
+		<h3 id="mysql"><strong>A) Setting MySQL</strong> - <a href="#toc">top</a></h3>
+		<p>
+			This script works with PHP 5.4 and MySQL 5.
+			The first thing to do is:
+			<ul>
+				<li>1.) Create a database</li>
+				<li>2.) Create a user for database</li>
+			</ul>
+			
+			
+		</p>
+	
+		<hr>
+
+		<h3 id="upload"><strong>B) Uploading Files</strong> - <a href="#toc">top</a></h3>
+
+		<p>
+			A) upload the folder <strong>"Script"</strong> to the <strong>"public_html"</strong> folder on your server.<br />
+            B) Log into your <strong>phpMyAdmin</strong> and import the <strong>shotpro.sql</strong> file located in the folder <strong>"Mysql"</strong> (<strong>NOTE:</strong>  the database already must be created )
+		</p> 
+
+
+
+		<hr>
+		
+		<h3 id="installation "><strong>C) Installation</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Make sure <strong>PDO driver</strong> is enabled on your server, if not, you should ask your hosting provider 
+			activation of this driver, so that the script can work.
+		</p>
+		<p>After you have uploaded all files can start to setup the files.</p>
+		
+		<h3>&rsaquo;&rsaquo; Database Connection/Mail Set Up</h3>
+		
+		<ol>
+			<li>Open the file <strong>config.php</strong> located in the folder <strong>"app/config"</strong>, with any text editor, e.g: NOTEPAD</li>
+			<li>change the following parameters, for theirs:</li>
+		</ol>
+	
+	<h4><strong>Database Connection</strong></h4>
+		  
+  <pre>
+  	'db_host'       => 'HOST', // Default localhost 
+	'db_name'       => 'DATABASE NAME', 
+	'db_user'       => 'USER', 
+	'db_password'   => 'PASS',
+  </pre>
+		<ol>
+			
+			<h4><strong>Mail Set Up</strong></h4>
+			
+  <pre>
+  	'mail'    => 'Sender of all emails ie: no-reply@gmail.com',
+  	'name'    => 'Name of Sender ie: ShotPro', 
+  </pre>
+			
+			<li>Save and close.</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="admin"><strong>D) Settings Admin Panel</strong> - <a href="#toc">top</a></h3>
+		
+<strong>Access to admin panel</strong>
+
+<p>- Just enter from <strong>http://yousite.com/login</strong> and enter the following credentials.</p>
+<pre>
+	User: Admin
+	Pass: 123456
+  </pre>
+  
+  <p>In admin panel you can:</p>
+		  
+			<ol>
+				<li>Change the site name</li>
+				<li>Change the site title welcome</li>
+				<li>Statistics</li>
+				<li>Enable/Disable news registrations</li>
+				<li>Enable/Disable login with Twitter</li>
+				<li>Enable/Disable Captcha</li>
+				<li>Enable/Disable Email Verification</li>
+				<li>Allow attachments in Shots</li>
+				<li>Allow attachments in Messages</li>
+				<li>Set keywords for the site. (SEO)</li>
+				<li>Add a description (SEO)</li>
+				<li>Long of private messages, and shots</li>
+				<li>Create/Edit pages e.g.: Help, Privacy, etc.</li>
+				<li>Payments Settings.</li>
+				<li>See payments - Ads / Jobs / Teams</li>
+				<li>Social Login</li>
+				<li>Set up social accounts</li>
+				<li>Manage members.</li>
+				<li>Manage members reported.</li>
+				<li>Manage shots reported.</li>
+				<li>Manage Lists</li>
+				<li>Manage Projects</li>
+				<li>Manage Ads</li>
+				<li>Manage Jobs</li>
+				<li>Admin can enable or disable the members records, and to invite with <strong>PRO User</strong> whether or not members all from the admin panel.</li>
+			</ol>
+				
+		<hr>
+		
+		<h3 id="twitter"><strong>E) Create App Twitter</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			1) Enter <a href="https://apps.twitter.com/" target="_blank">https://apps.twitter.com/</a><br />
+		</p>
+		
+		<img src="assets/images/screen_1.jpg" />
+		
+		<p>2) Click on "Create New App"</p>
+		
+		<img src="assets/images/screen_2.jpg" />
+		
+		<p>4) Fill out all fields</p>
+		
+		<ul>
+			<li><strong>Name:</strong> Your application name. This is used to attribute the source of a tweet and in user-facing authorization screens. 32 characters max.</li>
+			<li><strong>Description:</strong> Your application description, which will be shown in user-facing authorization screens. Between 10 and 200 characters max.</li>
+			<li><strong>Website:</strong> Your application's publicly accessible home page, where users can go to download, make use of, or find out more information about your application. This fully-qualified URL is used in the source attribution for tweets created by your application and will be shown in user-facing authorization screens.
+(If you don't have a URL yet, just put a placeholder here but remember to change it later.)</li>
+
+<li><strong>Callback URL</strong> Where should we return after successfully authenticating? OAuth 1.0a applications should explicitly specify their oauth_callback URL on the request token step, regardless of the value given here. To restrict your application from using callbacks, leave this field blank.</li>
+		</ul>
+		
+		<img src="assets/images/screen_3.jpg" />
+		
+		<p>5) Read "Developer Rules of the Road" and then click "Create your Twitter application"</p>
+		
+		<img src="assets/images/screen_4.jpg" />
+		
+		<p>6) Click "Keys and Access Tokens"</p>
+		
+		<img src="assets/images/screen_5.jpg" />
+		
+		<p>7) Setup in <strong>http://yousite.com/panel/admin/social-login</strong></p>
+		
+		<hr />
+		
+		<h3 id="customize"><strong>F) Customize</strong> - <a href="#toc">top</a></h3>
+		
+		<p><strong>Changing the logo</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / img / logo.png</em> </li>
+		</ul>
+		
+		<p><strong>Changing the logo footer</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / img / logo-watermark.png</em> </li>
+		</ul>
+		
+		<p><strong>Changing the favicon</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / img / favicon.ico</em> </li>
+		</ul>
+		
+		<p><strong>Change the background</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / img / bg.jpg</em> </li>
+		</ul>
+		
+		<p><strong>Change the background header index page</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / img / header.jpg</em> </li>
+			<li><strong>CSS:</strong> <em> Line 543 in public / css / main.css</em> </li>
+		</ul>
+		
+		<p><strong>Change the background Join Page</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / img / bg-join.jpg</em> </li>
+			<li><strong>CSS:</strong> <em> Line 1289 in public / css / main.css</em> </li>
+		</ul>
+		
+		<p><strong>Change the default link color</strong></p>
+		
+		<ul>
+			<li><strong>CSS:</strong> <em>Line: 207 in public / css / flat-ui.css</em> </li>
+		</ul>
+		
+		<p><strong>Change default image advertising</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / ad / ad.png</em> </li>
+		</ul>
+		
+		
+		<p><strong>Change default avatar</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / avatar / default.jpg</em> </li>
+		</ul>
+		
+		<p><strong>Change default image jobs</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / avatar / job_avatar.jpg</em> </li>
+		</ul>
+		
+		<p><strong>Cover default</strong></p>
+		
+		<ul>
+			<li><strong>Path:</strong> <em>public / cover / cover.jpg</em> </li>
+		</ul>
+		
+		
+		
+		<hr />
+		
+		
+		<h3><strong>* Sitemaps</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To call the SiteMaps must place the following URL</p>
+		
+		<pre>-> http://yousite.com/sitemaps.xml</pre>
+		
+		<hr />
+		<h3 id="credits"><strong>G) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following  files as listed.</p>
+		
+		<ul>
+			<li>Laravel - http://laravel.com/</li>
+			<li>jQuery - http://jquery.com/</li>
+			<li>Bootstrap - http://getbootstrap.com/</li>
+			<li>Font Awesome - http://fortawesome.github.io/Font-Awesome/</li>
+			<li>IcoMoon - http://icomoon.io</li>
+			<li>Flat UI   - http://designmodo.github.io/Flat-UI/</li>
+			<li>Placeholder Plugin jquery.placeholder.1.1.1.min.js //  Mike Taylor, http://miketaylr.com</li>
+			<li>Char Count count.js //  Alen Grakalic</li>
+			<li>jquery Form // malsup.com/jquery/form/‎</li>
+			<li>jqueryTimeago.js // http://timeago.yarp.com/</li>
+			<li>colorpicker.js // Stefan Petre www.eyecon.ro</li>
+			<li>jquery.colorbox.js // Jack Moore - http://www.jacklmoore.com/colorbox</li>
+			<li>Readmore - http://jedfoster.com/Readmore.js/</li>
+			<li>Bootboxjs -  http://bootboxjs.com/</li>
+			<li>Images - unsplash - http://unsplash.com/ -- splitshire http://www.splitshire.com/</li>
+			<li>Avatars - http://uifaces.com/</li>
+			<li>Fonts - https://www.google.com/fonts</li>
+			<li>http://www.tinymce.com/</li>
+			<li>https://github.com/sliptree/bootstrap-tokenfield</li>
+			<li>http://lokeshdhakar.com/projects/color-thief/</li>
+			<li>http://morrisjs.github.io/morris.js/</li>
+			<li>https://github.com/ubilabs/geocomplete/</li>
+		</ul>
+
+	<hr>
+		
+		
+		<p class="append-bottom alt large"><strong>Miguel Vasquez</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
